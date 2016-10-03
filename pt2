@@ -18,7 +18,7 @@ def validChoice(lst):
     ch = input("Please enter your choice: ")
     while ch.isdigit() is False or int(ch) < 1 or int(ch) > len(lst):
         ch = input("Please enter a valid choice: ")
-    return(ch)
+    return(int(ch))
 
 
 mainList = ["Checkings", "Savings", "Exit"]
@@ -31,3 +31,18 @@ savingsStr = createMenu(savingsList)
 
 print(mainStr)
 mChoice = validChoice(mainList)
+
+while mChoice != 3:
+    if mChoice == 1:
+        print("Checkings Menu")
+        print()
+        print(mainStr)
+        mChoice = validChoice(mainList)
+    else:
+        print("Savings Menu")
+        print()
+        print(mainStr)
+        mChoice = validChoice(mainList)
+
+print("Program ended")
+
