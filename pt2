@@ -20,6 +20,23 @@ def validChoice(lst):
         ch = input("Please enter a valid choice: ")
     return(int(ch))
 
+def checkingMenu():
+    print(checkingStr)
+    cChoice = validChoice(checkingList)
+    while cChoice != 3:
+        if cChoice == 1:
+            print("Deposit not implemented yet")
+            print()
+            print(checkingStr)
+            cChoice = validChoice(checkingList)
+        else:
+            print("Withdraw not implemented yet")
+            print()
+            print(checkingStr)
+            cChoice = validChoice(checkingList)
+            
+    return()
+
 
 mainList = ["Checkings", "Savings", "Exit"]
 checkingList = ["Deposit", "Withdraw", "Return to Main Menu"]
@@ -31,18 +48,18 @@ savingsStr = createMenu(savingsList)
 
 print(mainStr)
 mChoice = validChoice(mainList)
+print()
 
 while mChoice != 3:
     if mChoice == 1:
-        print("Checkings Menu")
+        checkingMenu()
         print()
         print(mainStr)
         mChoice = validChoice(mainList)
+        print()
     else:
         print("Savings Menu")
         print()
         print(mainStr)
         mChoice = validChoice(mainList)
-
-print("Program ended")
-
+        print()
