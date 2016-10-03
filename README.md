@@ -7,3 +7,5 @@
 10-03-2016 1601: Changed isValidChoice function and added documentation
 
 10-03-2016 1610: Added skeleton of main menu choices
+
+10-03-2016 1625: Implemented checking menu
