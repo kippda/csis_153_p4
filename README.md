@@ -13,3 +13,5 @@
 10-03-2016 1651: Implemented savings menu by copying checking menu
 
 10-03-2016 1705: Implemented main menu function by copying checking, program now uses main menu function instead of a while loop
+
+10-03-2016 1715: Cleaned up formatting
