@@ -6,6 +6,11 @@ def createMenu(tmpList):
         ct += 1
     return(tmpStr)
 
+def isValidChoice(ch, lst):
+    if ch.isdigit() and int(ch) > 0 and int(ch) <len(lst):
+        return True
+    return False
+
 
 mainList = ["Checkings", "Savings", "Exit"]
 checkingList = ["Deposit", "Withdraw", "Return to Main Menu"]
@@ -16,5 +21,6 @@ checkingStr = createMenu(checkingList)
 savingsStr = createMenu(savingsList)
 
 print(mainStr)
-print(checkingStr)
-print(savingsStr)
+choice = input("Please enter your choice: ")
+while isValidChoice(choice,mainList) != True:
+    choice = input("Please enter a valid choice: ")
