@@ -33,8 +33,28 @@ def checkingMenu():
             print("Withdraw not implemented yet")
             print()
             print(checkingStr)
-            cChoice = validChoice(checkingList)
-            
+            cChoice = validChoice(checkingList)        
+    return()
+
+def savingsMenu():
+    print(savingsStr)
+    sChoice = validChoice(savingsList)
+    while sChoice != 4:
+        if sChoice == 1:
+            print("Print Balance not implemented yet")
+            print()
+            print(savingsStr)
+            sChoice = validChoice(savingsList)
+        elif sChoice == 2:
+            print("Calculate Interest not implemented yet")
+            print()
+            print(savingsStr)
+            sChoice = validChoice(savingsList)
+        else:
+            print("Close Savings Account not implemented yet")
+            print()
+            print(savingsStr)
+            sChoice = validChoice(savingsList)        
     return()
 
 
@@ -58,8 +78,11 @@ while mChoice != 3:
         mChoice = validChoice(mainList)
         print()
     else:
-        print("Savings Menu")
+        savingsMenu()
         print()
         print(mainStr)
         mChoice = validChoice(mainList)
         print()
+
+print("Program ended")
+
