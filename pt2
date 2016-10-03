@@ -1,4 +1,8 @@
 def createMenu(tmpList):
+    """
+    Takes tmpList and returns a numbered string
+    with line breaks between each option
+    """
     ct = 1
     tmpStr = ""
     for option in tmpList:
@@ -6,10 +10,15 @@ def createMenu(tmpList):
         ct += 1
     return(tmpStr)
 
-def isValidChoice(ch, lst):
-    if ch.isdigit() and int(ch) > 0 and int(ch) <len(lst):
-        return True
-    return False
+def validChoice(lst):
+    """
+    Returns a choice that is a digit between 1 and
+    the length of the lst
+    """
+    ch = input("Please enter your choice: ")
+    while ch.isdigit() is False or int(ch) < 1 or int(ch) > len(lst):
+        ch = input("Please enter a valid choice: ")
+    return(ch)
 
 
 mainList = ["Checkings", "Savings", "Exit"]
@@ -21,6 +30,4 @@ checkingStr = createMenu(checkingList)
 savingsStr = createMenu(savingsList)
 
 print(mainStr)
-choice = input("Please enter your choice: ")
-while isValidChoice(choice,mainList) != True:
-    choice = input("Please enter a valid choice: ")
+mChoice = validChoice(mainList)
