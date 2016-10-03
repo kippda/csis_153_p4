@@ -1,0 +1,20 @@
+def createMenu(tmpList):
+    ct = 1
+    tmpStr = ""
+    for option in tmpList:
+        tmpStr += str(ct) + ". " + option + " " + "\n"
+        ct += 1
+    return(tmpStr)
+
+
+mainList = ["Checkings", "Savings", "Exit"]
+checkingList = ["Deposit", "Withdraw", "Return to Main Menu"]
+savingsList = ["Print Balance", "Calculate Interest", "Close Savings Account", "Return to Main Menu"]
+
+mainStr = createMenu(mainList)
+checkingStr = createMenu(checkingList)
+savingsStr = createMenu(savingsList)
+
+print(mainStr)
+print(checkingStr)
+print(savingsStr)
