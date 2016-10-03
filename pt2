@@ -6,7 +6,7 @@ def createMenu(tmpList):
     ct = 1
     tmpStr = ""
     for option in tmpList:
-        tmpStr += str(ct) + ". " + option + " " + "\n"
+        tmpStr += "\t" + str(ct) + ". " + option + " " + "\n"
         ct += 1
     return(tmpStr)
 
@@ -25,8 +25,10 @@ def mainMenu():
     print(mainStr)
     choice = validChoice(mainList, mainStr)
     if choice == 1:
+        print()
         checkingMenu()
     elif choice == 2:
+        print()
         savingsMenu()       
     else:
         print()
@@ -45,7 +47,8 @@ def checkingMenu():
             print("Withdraw not implemented yet")
             print()
             print(checkingStr)
-            choice = validChoice(checkingList, checkingStr)        
+            choice = validChoice(checkingList, checkingStr)
+    print()
     mainMenu()
 
 def savingsMenu():
@@ -74,11 +77,12 @@ mainList = ["Checkings", "Savings", "Exit"]
 checkingList = ["Deposit", "Withdraw", "Return to Main Menu"]
 savingsList = ["Print Balance", "Calculate Interest", "Close Savings Account", "Return to Main Menu"]
 
-mainStr = createMenu(mainList)
-checkingStr = createMenu(checkingList)
-savingsStr = createMenu(savingsList)
+mainStr = "Main Menu:" + "\n" + createMenu(mainList)
+checkingStr = "Checking:" + "\n" + createMenu(checkingList)
+savingsStr = "Savings:" + "\n" + createMenu(savingsList)
 
 mainMenu()
+
 
 
 
