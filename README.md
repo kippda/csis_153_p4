@@ -9,3 +9,5 @@
 10-03-2016 1610: Added skeleton of main menu choices
 
 10-03-2016 1625: Implemented checking menu
+
+10-03-2016 1651: Implemented savings menu by copying checking menu
